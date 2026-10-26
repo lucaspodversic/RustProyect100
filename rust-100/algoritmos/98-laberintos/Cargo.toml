@@ -1,0 +1,13 @@
+# =============================================================================
+# Proyecto 98 — Resolución de laberintos: BFS, DFS, Dijkstra y A*
+# Sin dependencias. Incluye generador (backtracker recursivo iterativo) y
+# visualización ASCII del camino.
+# =============================================================================
+[package]
+name = "laberintos"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Generador y solucionador de laberintos con BFS, DFS, Dijkstra y A*"
+
+[dependencies]

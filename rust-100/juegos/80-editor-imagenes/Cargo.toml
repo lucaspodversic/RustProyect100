@@ -1,0 +1,14 @@
+# Proyecto 80 — Editor de imágenes por línea de comandos.
+[package]
+name = "editor-imagenes"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Editor de imágenes: filtros (grises, sepia, brillo, contraste, desenfoque gaussiano, enfoque, bordes Sobel), recorte, redimensionado bilineal, rotación, deshacer/rehacer y pipeline de comandos."
+license = "MIT"
+
+[dependencies]
+# Sólo usamos `image` para leer/escribir PNG; los filtros están hechos a mano.
+image = { version = "0.25", default-features = false, features = ["png"] }
+thiserror = "1"

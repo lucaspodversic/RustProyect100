@@ -1,0 +1,24 @@
+# Proyecto 70 — Billetera: generación de direcciones y firma de transacciones.
+[package]
+name = "billetera"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Billetera secp256k1: direcciones Ethereum (EIP-55) y Bitcoin (P2PKH), firma EIP-155 con RLP y recuperación de firmante."
+license = "MIT"
+
+[dependencies]
+# Curva secp256k1 + ECDSA con nonce determinista RFC 6979 (RustCrypto).
+k256 = { version = "0.13", features = ["ecdsa", "sha256"] }
+# Keccak-256 (hash de Ethereum).
+sha3 = "0.10"
+# SHA-256 y RIPEMD-160 para direcciones Bitcoin.
+sha2 = "0.10"
+ripemd = "0.1"
+# Base58 (alfabeto de Bitcoin).
+bs58 = "0.5"
+hex = "0.4"
+# Fuente de entropía del sistema operativo (rand_core 0.6, compatible con k256).
+rand = "0.8"
+thiserror = "1"

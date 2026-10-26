@@ -1,0 +1,13 @@
+# =============================================================================
+# Proyecto 97 — Máquina de Turing y autómatas finitos (AFD / AFN)
+# Sin dependencias: simulador de MT con formato de texto propio, AFD, AFN con
+# transiciones ε, construcción de subconjuntos (AFN→AFD) y minimización.
+# =============================================================================
+[package]
+name = "automatas"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Simulador de máquinas de Turing y autómatas finitos"
+
+[dependencies]

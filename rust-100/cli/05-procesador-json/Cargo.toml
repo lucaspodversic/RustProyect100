@@ -1,0 +1,11 @@
+# Proyecto 05 — Procesador de JSON por línea de comandos (mini-jq).
+[package]
+name = "procesador-json"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }  # conserva el orden de claves

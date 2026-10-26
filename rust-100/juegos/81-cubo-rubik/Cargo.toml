@@ -1,0 +1,11 @@
+# Proyecto 81 — Cubo de Rubik: estado, movimientos y resolución corta.
+[package]
+name = "cubo-rubik"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Cubo de Rubik 3x3: 54 stickers, permutaciones generadas por geometría 3D, notación Singmaster (caras, capas medias, rotaciones), mezcla, inversa, orden de secuencias, resolvedor IDDFS y render en red ASCII/ANSI."
+license = "MIT"
+
+[dependencies]

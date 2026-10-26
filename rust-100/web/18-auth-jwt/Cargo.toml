@@ -1,0 +1,21 @@
+# Proyecto 18 — Autenticación JWT: registro, login y rutas protegidas.
+[package]
+name = "auth-jwt"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "derive"] }
+jsonwebtoken = "9"   # firma/verificación HS256
+argon2 = "0.5"       # hash de contraseñas (ganador de la Password Hashing Competition)
+password-hash = { version = "0.5", features = ["getrandom"] }  # habilita OsRng para generar sales
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"

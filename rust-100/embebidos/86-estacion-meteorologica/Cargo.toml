@@ -1,0 +1,24 @@
+# =============================================================================
+# Proyecto 86 — Estación meteorológica IoT (temperatura/humedad + Wi‑Fi mock)
+# -----------------------------------------------------------------------------
+# Crate `no_std` (fuera de los tests) que contiene TODA la lógica de la estación:
+#   * driver del sensor SHT3x (I2C) escrito sobre `embedded-hal` 1.0,
+#   * agregación estadística de lecturas (mín/máx/promedio),
+#   * serialización a JSON sin asignación dinámica,
+#   * transporte "Wi‑Fi" abstracto con reintentos y backoff.
+# En los tests se reemplaza el hardware por `embedded-hal-mock` y un Wi‑Fi falso.
+# =============================================================================
+[package]
+name = "estacion-meteorologica"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Estación meteorológica IoT no_std: SHT3x por I2C + envío por Wi-Fi (mock)"
+
+[dependencies]
+# Solo los *traits* del HAL: el driver queda independiente del microcontrolador.
+embedded-hal = "1"
+
+[dev-dependencies]
+# Mocks de I2C y delay que verifican transacción por transacción.
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

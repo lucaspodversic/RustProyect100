@@ -1,0 +1,20 @@
+# Proyecto 24 — Acortador de URLs con analíticas (clics por día, referrer, dispositivo, únicos).
+[package]
+name = "acortador-analiticas"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "derive"] }
+url = "2"
+blake3 = "1"   # hash de visitante (privacidad: nunca guardamos la IP)
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"

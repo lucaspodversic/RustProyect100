@@ -1,0 +1,19 @@
+# =============================================================================
+# Proyecto 89 — Monitor de calidad del aire
+# PMS5003 (partículas, UART) + SCD40 (CO2, I2C) + LCD 16x2 (HD44780 vía PCF8574)
+# Cálculo de AQI (EPA 2024), media móvil y alarma con histéresis. no_std.
+# =============================================================================
+[package]
+name = "calidad-aire"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Monitor de calidad del aire no_std: PMS5003, SCD40, AQI y LCD 16x2"
+
+[dependencies]
+embedded-hal = "1"
+# Trait estándar de lectura de bytes para UART en el ecosistema embedded 1.0.
+embedded-io = "0.6"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

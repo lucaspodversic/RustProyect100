@@ -1,0 +1,17 @@
+# =============================================================================
+# Proyecto 92 — Driver de sensor IMU MPU‑6050 con embedded-hal 1.0
+# Driver genérico (funciona con cualquier HAL que implemente I2c), no_std,
+# probado byte a byte con embedded-hal-mock.
+# =============================================================================
+[package]
+name = "driver-imu"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Driver no_std del IMU MPU-6050 (acelerómetro + giroscopio) sobre embedded-hal 1.0"
+
+[dependencies]
+embedded-hal = "1"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

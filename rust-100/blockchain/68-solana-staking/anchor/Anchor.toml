@@ -1,0 +1,7 @@
+# Configuración Anchor (referencia). Requiere anchor-cli 0.30+ y solana-cli.
+[programs.localnet]
+staking = "Stak1ng11111111111111111111111111111111111"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"

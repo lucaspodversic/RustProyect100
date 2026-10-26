@@ -1,0 +1,6 @@
+[
+  {"nombre": "facturas", "de_contiene": "facturacion@", "accion": {"mover": "Facturas"}},
+  {"nombre": "promos", "asunto_contiene": "oferta", "accion": "marcar_leido"},
+  {"nombre": "amigos", "de_contiene": "@amigos.example", "accion": "destacar"},
+  {"nombre": "spam", "de_contiene": "@spam.example", "asunto_contiene": "ganaste", "accion": "borrar"}
+]

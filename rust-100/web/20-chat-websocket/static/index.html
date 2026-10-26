@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- Cliente mínimo de prueba: abrí dos pestañas y chateá. -->
+<html lang="es"><meta charset="utf-8"><title>Chat Rust</title>
+<body style="font-family:sans-serif;max-width:640px;margin:2em auto">
+<h1>Chat</h1>
+<p>Sala <input id="sala" value="general"> Nombre <input id="nombre" value="anon"> <button onclick="conectar()">Entrar</button></p>
+<pre id="log" style="border:1px solid #ccc;height:300px;overflow:auto;padding:.5em"></pre>
+<form onsubmit="ev.send(txt.value);txt.value='';return false"><input id="txt" style="width:80%"><button>Enviar</button></form>
+<script>
+let ev;
+function pintar(e){
+  if(e.tipo==='historial'){e.mensajes.forEach(pintar);return}
+  const l=document.getElementById('log');
+  // textContent (no innerHTML): evita XSS con mensajes maliciosos.
+  l.textContent+=(e.tipo==='mensaje'?`${e.de}: ${e.texto}`:`* ${e.tipo} ${e.nombre||e.motivo||''}`)+"\n";
+  l.scrollTop=l.scrollHeight;
+}
+function conectar(){
+  const s=encodeURIComponent(sala.value), n=encodeURIComponent(nombre.value);
+  ev=new WebSocket(`ws://${location.host}/ws/${s}?nombre=${n}`);
+  ev.onmessage=m=>pintar(JSON.parse(m.data));
+}
+</script></body></html>

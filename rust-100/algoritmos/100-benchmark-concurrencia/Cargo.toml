@@ -1,0 +1,17 @@
+# =============================================================================
+# Proyecto 100 — Benchmark de concurrencia: std::thread vs tokio vs rayon
+# Compara estrategias en dos tipos de carga:
+#   - CPU‑bound: contar primos (cálculo puro).
+#   - I/O‑bound: esperas simuladas (sleep), como peticiones de red.
+# El binario `cargo run --release` imprime las tablas comparativas.
+# =============================================================================
+[package]
+name = "benchmark-concurrencia"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Comparativa de std::thread, tokio y rayon en cargas CPU e I/O"
+
+[dependencies]
+rayon = "1.10"
+tokio = { version = "1", features = ["rt-multi-thread", "time", "macros", "sync"] }

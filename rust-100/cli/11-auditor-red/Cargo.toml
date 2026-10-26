@@ -1,0 +1,13 @@
+# Proyecto 11 — Auditor de red local: interfaces, IPs, gateway y DNS (tipo `mynet`).
+[package]
+name = "auditor-red"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+if-addrs = "0.13"   # lista interfaces de red multiplataforma (getifaddrs / GetAdaptersAddresses)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

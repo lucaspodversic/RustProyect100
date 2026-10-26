@@ -1,0 +1,20 @@
+# Proyecto 72 — Contrato inteligente de votación descentralizada.
+[package]
+name = "votacion-descentralizada"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Contrato de votación: registro de votantes, delegación transitiva, votos ponderados, commit-reveal, quórum, fases por altura de bloque y votos firmados (ed25519)."
+license = "MIT"
+
+[dependencies]
+sha2 = "0.10"
+hex = "0.4"
+# Firmas ed25519 para votos "sin gas" (meta-transacciones firmadas).
+ed25519-dalek = "2"
+thiserror = "1"
+
+[dev-dependencies]
+rand = "0.8"
+ed25519-dalek = { version = "2", features = ["rand_core"] }

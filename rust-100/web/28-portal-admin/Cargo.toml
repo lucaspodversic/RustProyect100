@@ -1,0 +1,23 @@
+# Proyecto 28 — Portal de administración: login con sesiones en cookie,
+# roles, protección CSRF, panel HTML renderizado en el servidor y auditoría.
+[package]
+name = "portal-admin"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+axum = "0.8"   # incluye extractor Form (application/x-www-form-urlencoded)
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "derive"] }
+argon2 = "0.5"
+password-hash = { version = "0.5", features = ["getrandom"] }  # OsRng
+sha2 = "0.10"   # guardamos sólo el HASH del token de sesión
+hex = "0.4"
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"

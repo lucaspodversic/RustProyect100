@@ -1,0 +1,8 @@
+# Proyecto 27 — Full-stack Rust: frontend Yew (SSR + hidratación WASM) + backend Axum.
+# Workspace con tres crates:
+#   compartido/ → tipos y validación usados por AMBOS lados (una sola fuente de verdad)
+#   frontend/   → componentes Yew; en nativo se renderizan en el servidor (SSR)
+#   backend/    → API REST + página inicial renderizada con el frontend
+[workspace]
+members = ["compartido", "frontend", "backend"]
+resolver = "2"

@@ -1,0 +1,13 @@
+# Proyecto 06 — Visor de procesos interactivo (tipo top/htop simplificado).
+[package]
+name = "visor-procesos"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+sysinfo = "0.33"     # lectura multiplataforma de procesos, CPU y memoria
+ratatui = "0.29"
+crossterm = "0.28"

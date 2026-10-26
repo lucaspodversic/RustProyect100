@@ -1,0 +1,15 @@
+# Proyecto 69 — Explorador de bloques en TUI (ratatui).
+[package]
+name = "explorador-tui"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Explorador de bloques en terminal: lista de bloques, detalle, transacciones, búsqueda; lógica testeable sin TTY."
+license = "MIT"
+
+[dependencies]
+# ratatui trae el backend crossterm por defecto; en tests usamos TestBackend.
+ratatui = "0.29"
+sha2 = "0.10"
+hex = "0.4"

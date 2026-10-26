@@ -1,0 +1,11 @@
+# Proyecto 79 — Visualizador de audio (samples → barras), sin hardware de audio.
+[package]
+name = "visualizador-audio"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Espectro de audio: FFT radix-2 propia, ventana de Hann, bandas logarítmicas en dB, suavizado attack/decay con picos, fuentes mock (seno, chirp, ruido, WAV) y render de barras en texto/PPM."
+license = "MIT"
+
+[dependencies]

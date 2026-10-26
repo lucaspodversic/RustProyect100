@@ -1,0 +1,17 @@
+# =============================================================================
+# Proyecto 88 — Reloj despertador (Raspberry Pi Pico + OLED SSD1306 + botones)
+# Lógica no_std: reloj, alarma con snooze, antirrebote de botones, framebuffer
+# monocromo con fuente 5x7 y driver SSD1306 por I2C (embedded-hal 1.0).
+# =============================================================================
+[package]
+name = "reloj-despertador"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Reloj despertador no_std: OLED SSD1306, botones con antirrebote y alarma con snooze"
+
+[dependencies]
+embedded-hal = "1"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

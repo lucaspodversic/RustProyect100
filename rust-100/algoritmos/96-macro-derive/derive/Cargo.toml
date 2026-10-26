@@ -1,0 +1,18 @@
+[package]
+name = "describir-derive"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Implementación de #[derive(Describir)]"
+
+[lib]
+# Indica a cargo que este crate exporta macros procedurales.
+proc-macro = true
+
+[dependencies]
+# syn: parsea el TokenStream a un AST (DeriveInput, Fields, Attribute...).
+syn = { version = "2", features = ["full"] }
+# quote: genera código Rust a partir de plantillas con interpolación #var.
+quote = "1"
+# proc-macro2: versión de TokenStream/Span usable fuera del compilador (tests).
+proc-macro2 = "1"

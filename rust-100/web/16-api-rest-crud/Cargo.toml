@@ -1,0 +1,19 @@
+# Proyecto 16 — API REST CRUD con Axum + SQLx (SQLite).
+[package]
+name = "api-rest-crud"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Sin macros de compilación (query!): así no hace falta una base viva al compilar.
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "derive"] }
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }   # ServiceExt::oneshot para tests sin red
+http-body-util = "0.1"

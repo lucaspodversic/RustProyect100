@@ -1,0 +1,16 @@
+# Proyecto 15 — Visualizador de dependencias de Cargo como grafo (desde Cargo.lock).
+[package]
+name = "grafo-deps-cargo"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[[bin]]
+name = "cargografo"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"

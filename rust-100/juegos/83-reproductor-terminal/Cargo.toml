@@ -1,0 +1,13 @@
+# Proyecto 83 — Reproductor de música en terminal (audio mockeable).
+[package]
+name = "reproductor-terminal"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Reproductor de música TUI: lista M3U, play/pausa/siguiente/anterior, seek, volumen y mute, aleatorio y repetición; backend de audio detrás de un trait con implementación simulada para tests."
+license = "MIT"
+
+[dependencies]
+ratatui = "0.29"
+thiserror = "1"

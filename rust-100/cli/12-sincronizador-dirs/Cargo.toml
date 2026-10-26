@@ -1,0 +1,19 @@
+# Proyecto 12 — Sincronizador de directorios (rsync simplificado, unidireccional).
+[package]
+name = "sincronizador-dirs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[[bin]]
+name = "rsincro"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+walkdir = "2"
+blake3 = "1"   # hash rápido para el modo --checksum
+
+[dev-dependencies]
+tempfile = "3"

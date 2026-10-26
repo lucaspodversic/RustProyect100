@@ -1,0 +1,20 @@
+# =============================================================================
+# Proyecto 93 — Firmware básico de dron (cuadricóptero en X)
+# Filtro complementario, PID en cascada (ángulo → velocidad), mezclador X,
+# armado/failsafe y un simulador físico para probarlo todo sin hardware.
+# =============================================================================
+[package]
+name = "firmware-dron"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Firmware no_std de cuadricóptero: estimación de actitud, PID, mezclador, failsafe + simulador"
+
+[dependencies]
+embedded-hal = "1"
+# Funciones matemáticas f32 (sin, atan2, sqrt) sin la std: en no_std no
+# existen f32::sin y compañía porque dependen de la libm del sistema.
+libm = "0.2"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

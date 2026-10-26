@@ -1,0 +1,15 @@
+# Proyecto 66 — Blockchain mínima con Prueba de Trabajo (PoW).
+[package]
+name = "blockchain-minima"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Blockchain mínima: bloques encadenados por hash, PoW ajustable y validación completa de la cadena."
+license = "MIT"
+
+[dependencies]
+# SHA-256 estándar de RustCrypto para el hash de cada bloque.
+sha2 = "0.10"
+# Codificación hexadecimal para mostrar hashes legibles.
+hex = "0.4"

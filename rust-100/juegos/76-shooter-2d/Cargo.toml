@@ -1,0 +1,11 @@
+# Proyecto 76 — Shooter 2D con motor propio headless.
+[package]
+name = "shooter-2d"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Shooter espacial 2D: paso fijo, entrada abstracta, oleadas, colisiones AABB, puntaje y render a framebuffer (ASCII/RGB) sin ventana."
+license = "MIT"
+
+[dependencies]

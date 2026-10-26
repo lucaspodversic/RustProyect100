@@ -1,0 +1,11 @@
+# Proyecto 78 — Juego de plataformas con física y colisiones.
+[package]
+name = "plataformas"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Plataformero 2D headless: tilemap ASCII, gravedad, colisiones AABB por ejes, coyote time, jump buffer, salto variable, plataformas de un sentido, monedas, pinchos, meta y cámara."
+license = "MIT"
+
+[dependencies]

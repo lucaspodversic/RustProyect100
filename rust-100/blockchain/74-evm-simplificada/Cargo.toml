@@ -1,0 +1,14 @@
+# Proyecto 74 — Máquina virtual EVM simplificada.
+[package]
+name = "evm-simplificada"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Intérprete EVM didáctico: U256 propio, pila, memoria, storage, gas, saltos validados, logs, RETURN/REVERT y un ensamblador."
+license = "MIT"
+
+[dependencies]
+sha3 = "0.10"
+hex = "0.4"
+thiserror = "1"

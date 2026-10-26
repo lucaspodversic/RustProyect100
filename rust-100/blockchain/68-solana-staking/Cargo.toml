@@ -1,0 +1,13 @@
+# Proyecto 68 — Programa de staking estilo Solana (lógica + tests; ruta Anchor documentada).
+[package]
+name = "solana-staking"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Programa de staking al estilo Solana: cuentas, PDAs, firmantes, instrucciones serializadas y recompensas por tiempo."
+license = "MIT"
+
+[dependencies]
+sha2 = "0.10"
+thiserror = "1"

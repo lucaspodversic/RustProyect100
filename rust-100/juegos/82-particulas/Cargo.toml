@@ -1,0 +1,11 @@
+# Proyecto 82 — Simulación de partículas.
+[package]
+name = "simulacion-particulas"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Motor de partículas 2D: Euler semi-implícito, emisores con tasa y vida, fuerzas (gravedad, viento, atractores, arrastre), rebotes en paredes, colisiones elásticas con grilla espacial y render ASCII por densidad."
+license = "MIT"
+
+[dependencies]

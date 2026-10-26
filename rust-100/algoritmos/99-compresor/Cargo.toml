@@ -1,0 +1,13 @@
+# =============================================================================
+# Proyecto 99 — Compresor: RLE (PackBits) + Huffman canónico
+# Sin dependencias. Formato contenedor propio con CRC‑32 y selección
+# automática del mejor método. CLI: comprimir / descomprimir / info.
+# =============================================================================
+[package]
+name = "compresor"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Compresor RLE + Huffman canónico con contenedor y CRC-32"
+
+[dependencies]

@@ -1,0 +1,29 @@
+# Frontend Yew. Features:
+#   ssr (por defecto) → render a HTML en el servidor / tests nativos
+#   hydrate           → build WASM con `trunk` que "hidrata" el HTML del servidor
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[features]
+default = ["ssr"]
+ssr = ["yew/ssr"]
+hydrate = ["yew/hydration"]
+
+[dependencies]
+compartido = { path = "../compartido" }
+yew = "0.21"
+serde_json = "1"
+
+# Solo al compilar a WebAssembly: llamadas HTTP desde el navegador.
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+gloo-net = { version = "0.6", default-features = false, features = ["http", "json"] }
+wasm-bindgen-futures = "0.4"
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["HtmlInputElement", "Window", "Document", "Element"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt"] }

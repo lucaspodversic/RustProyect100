@@ -1,0 +1,16 @@
+# Proyecto 03 — Buscador local tipo ripgrep (por nombre y por contenido), en paralelo.
+[package]
+name = "buscador-local"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+regex = "1"
+walkdir = "2"   # recorrido recursivo de directorios
+rayon = "1"     # paralelismo de datos (busca en varios archivos a la vez)
+
+[dev-dependencies]
+tempfile = "3"

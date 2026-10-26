@@ -1,0 +1,13 @@
+# =============================================================================
+# Proyecto 94 — Estructuras de datos desde cero
+# Lista enlazada, árbol binario de búsqueda y tabla hash implementados sin
+# usar las colecciones de la biblioteca estándar (solo Box/Vec como memoria).
+# =============================================================================
+[package]
+name = "estructuras-de-datos"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Lista enlazada, BST y HashMap implementados desde cero en Rust seguro"
+
+[dependencies]

@@ -1,0 +1,13 @@
+# Proyecto 85 — Visualizador de topología GPU/PCIe (sysfs + TUI).
+[package]
+name = "topologia-pcie"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Lee /sys/bus/pci (o un sysfs simulado), arma el árbol PCIe, clasifica dispositivos, detecta enlaces degradados, calcula ancho de banda y la matriz de afinidad entre GPUs; interfaz TUI con ratatui."
+license = "MIT"
+
+[dependencies]
+ratatui = "0.29"
+thiserror = "1"

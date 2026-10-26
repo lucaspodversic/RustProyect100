@@ -1,0 +1,17 @@
+# Proyecto 30 — Rate limiter como middleware Tower/Axum (token bucket por clave).
+[package]
+name = "rate-limiter"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+tower = "0.5"     # traits Layer y Service
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
+tokio = { version = "1", features = ["io-util"] }   # AsyncRead/WriteExt en el test TCP

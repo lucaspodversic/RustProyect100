@@ -1,0 +1,20 @@
+# =============================================================================
+# Proyecto 95 — Ordenamiento paralelo con rayon + benchmarks
+# Merge sort y quicksort secuenciales y paralelos (divide y vencerás con
+# rayon::join), comparados contra sort/sort_unstable/par_sort de la std/rayon.
+# =============================================================================
+[package]
+name = "ordenamiento-paralelo"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Merge sort y quicksort paralelos con rayon::join, con benchmarks"
+
+[dependencies]
+rayon = "1.10"
+
+# Benchmark propio con Instant (sin criterion) para no añadir dependencias
+# pesadas: `cargo bench` lo ejecuta en modo release.
+[[bench]]
+name = "comparativa"
+harness = false

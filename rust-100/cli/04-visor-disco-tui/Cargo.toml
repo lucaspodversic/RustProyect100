@@ -1,0 +1,15 @@
+# Proyecto 04 — Visor de uso de disco con TUI (ratatui + crossterm).
+[package]
+name = "visor-disco-tui"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+ratatui = "0.29"     # widgets de interfaz de texto
+crossterm = "0.28"   # backend de terminal (raw mode, eventos de teclado)
+
+[dev-dependencies]
+tempfile = "3"

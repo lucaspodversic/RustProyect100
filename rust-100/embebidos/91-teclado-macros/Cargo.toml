@@ -1,0 +1,17 @@
+# =============================================================================
+# Proyecto 91 — Teclado de macros (macropad) para RP2040
+# Escaneo de matriz, antirrebote por tecla, capas, macros y reportes HID de
+# arranque (boot keyboard, 8 bytes, 6KRO). Lógica no_std probada en el host.
+# =============================================================================
+[package]
+name = "teclado-macros"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Firmware de macropad no_std: matriz, antirrebote, capas, macros y HID"
+
+[dependencies]
+embedded-hal = "1"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

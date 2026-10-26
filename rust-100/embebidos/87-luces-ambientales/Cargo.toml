@@ -1,0 +1,17 @@
+# =============================================================================
+# Proyecto 87 — Controlador de luces ambientales
+# Ajusta el color de una tira RGB según la hora del día, la luz ambiente y la
+# presencia de personas. Lógica `no_std` sobre embedded-hal 1.0 (PWM + GPIO).
+# =============================================================================
+[package]
+name = "luces-ambientales"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Controlador de luces RGB por hora/sensores, no_std sobre embedded-hal"
+
+[dependencies]
+embedded-hal = "1"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

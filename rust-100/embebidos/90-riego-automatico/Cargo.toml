@@ -1,0 +1,17 @@
+# =============================================================================
+# Proyecto 90 — Sistema de riego automático por humedad del suelo
+# Zonas con válvulas, bomba compartida, sensores capacitivos (ADC), sensor de
+# lluvia y nivel de tanque. Máquina de estados no_std sobre embedded-hal 1.0.
+# =============================================================================
+[package]
+name = "riego-automatico"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Riego automático no_std: zonas, histéresis de humedad, lluvia, tanque y horarios"
+
+[dependencies]
+embedded-hal = "1"
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11", default-features = false, features = ["eh1"] }

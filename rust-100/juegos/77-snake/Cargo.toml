@@ -1,0 +1,14 @@
+# Proyecto 77 — Snake con high score persistente.
+[package]
+name = "snake-highscore"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Snake: lógica pura testeable, cola de giros, modos pared/toroide, IA BFS, tabla de récords persistente en JSON con escritura atómica y modo terminal."
+license = "MIT"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+crossterm = "0.28"

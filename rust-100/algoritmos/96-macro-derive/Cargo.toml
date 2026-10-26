@@ -1,0 +1,20 @@
+# =============================================================================
+# Proyecto 96 — Macro procedural `#[derive(Describir)]`
+# Este es un workspace con dos crates:
+#   - `describir`        (raíz): define el trait y reexporta la macro.
+#   - `describir-derive` (derive/): la macro procedural (proc-macro = true).
+# Las macros procedurales DEBEN vivir en su propio crate porque se compilan
+# para el host y se cargan en el compilador como un plugin.
+# =============================================================================
+[package]
+name = "describir"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Trait Describir + derive procedural con atributos omitir/renombrar"
+
+[dependencies]
+describir-derive = { path = "derive", version = "0.1.0" }
+
+[workspace]
+members = ["derive"]

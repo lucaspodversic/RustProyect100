@@ -1,0 +1,12 @@
+# Proyecto 84 — Pong multijugador local por TCP.
+[package]
+name = "pong-tcp"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Pong para dos jugadores en red local: servidor autoritativo con tick fijo, protocolo de texto por líneas sobre TCP, clientes con IA o teclado y render ASCII."
+license = "MIT"
+
+[dependencies]
+thiserror = "1"

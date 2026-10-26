@@ -1,0 +1,15 @@
+# Proyecto 75 — Escrow con atomic swap entre dos partes (HTLC).
+[package]
+name = "escrow-atomic-swap"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Atomic swap cross-chain con HTLC (hashlock + timelock) sobre dos cadenas simuladas, más escrow con árbitro."
+license = "MIT"
+
+[dependencies]
+sha2 = "0.10"
+hex = "0.4"
+rand = "0.8"
+thiserror = "1"

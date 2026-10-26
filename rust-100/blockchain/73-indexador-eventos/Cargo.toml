@@ -1,0 +1,16 @@
+# Proyecto 73 — Indexador de eventos on-chain para una DApp.
+[package]
+name = "indexador-eventos"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+resolver = "3"
+description = "Indexador de logs estilo EVM: ingesta por bloques, manejo de reorgs, índices secundarios, consultas paginadas, agregados y checkpoint."
+license = "MIT"
+
+[dependencies]
+sha3 = "0.10"
+hex = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
